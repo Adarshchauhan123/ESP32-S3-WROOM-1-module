@@ -29,13 +29,13 @@ See [`docs/project-status.md`](docs/project-status.md) for the same status in a 
 
 ### Main Controller, Power and Interfaces
 
-![HEAD PCB main schematic](docs/images/head-pcb-schematic-main.png)
+![HEAD PCB main schematic](docs/images/head-pcb-schematic-main.png.png)
 
 The main schematic shows the **ESP32-S3 controller**, **USB-C interface**, **BOOT/RESET circuitry**, **3.3 V regulation**, **TFT connector**, **dual servo interfaces**, and the **head-to-body connection**.
 
 ### Sensors, Audio and Peripherals
 
-![HEAD PCB peripheral schematic](docs/images/head-pcb-schematic-peripherals.png)
+![HEAD PCB peripheral schematic](docs/images/head-pcb-schematic-peripherals.png.png)
 
 The peripheral schematic includes the **MAX98357A audio amplifier**, **WS2812B RGB LED**, **ADXL345 accelerometer**, **microSD interface**, **TTP223 touch sensor**, and **INMP441 digital microphone**.
 
