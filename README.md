@@ -25,6 +25,20 @@ See [`docs/project-status.md`](docs/project-status.md) for the same status in a 
 
 ![HEAD PCB layout](docs/images/Screenshot%202026-08-21%20033306.png)
 
+## Schematic
+
+### Main Controller, Power and Interfaces
+
+![HEAD PCB main schematic](docs/images/head-pcb-schematic-main.png)
+
+The main schematic shows the **ESP32-S3 controller**, **USB-C interface**, **BOOT/RESET circuitry**, **3.3 V regulation**, **TFT connector**, **dual servo interfaces**, and the **head-to-body connection**.
+
+### Sensors, Audio and Peripherals
+
+![HEAD PCB peripheral schematic](docs/images/head-pcb-schematic-peripherals.png)
+
+The peripheral schematic includes the **MAX98357A audio amplifier**, **WS2812B RGB LED**, **ADXL345 accelerometer**, **microSD interface**, **TTP223 touch sensor**, and **INMP441 digital microphone**.
+
 ### Functional block diagram
 
 ```mermaid
@@ -42,8 +56,6 @@ flowchart TD
     MCU --> RGB["WS2812B\nRGB status LED"]
     MCU --> USB["Native USB-C\nBOOT / RESET"]
 ```
-
-> A dedicated schematic image and a 3D-render image are not committed yet. The editable schematic exists inside the EasyEDA Pro project, and a 3D CAD export exists separately; both should be added only from verified exports of the final design revision.
 
 ## What this board does
 
