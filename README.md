@@ -2,11 +2,48 @@
 
 A custom **2-layer embedded controller PCB** built around the **ESP32-S3-WROOM-1-N16R8**, designed in **EasyEDA Pro** as the head/control board of a larger robot system.
 
-**Status:** Schematic and PCB layout complete. Fabrication, assembled-board bring-up and measured bench validation are not yet documented. DRC-clean status is not claimed without an exported DRC report.
+## Project status
 
-## PCB layout
+| Area | Status |
+|---|---|
+| Schematic | Complete in EasyEDA Pro source |
+| PCB layout | Complete |
+| BOM | Included |
+| DRC | Not claimed until an exported DRC report is committed |
+| Gerber / NC drill | Not yet committed |
+| Fabrication | Not documented |
+| Assembly / bring-up | Not documented |
+| Bench measurements | Not documented |
+| BODY PCB | Part of the wider architecture; editable design is not included here |
+| Live 3D viewer | Not currently published / verified |
+
+See [`docs/project-status.md`](docs/project-status.md) for the same status in a dedicated page.
+
+## Visual overview
+
+### PCB layout
 
 ![HEAD PCB layout](docs/images/Screenshot%202026-08-21%20033306.png)
+
+### Functional block diagram
+
+```mermaid
+flowchart TD
+    BODY["BODY PCB\nBattery / charging / protection\n5V_SYS generation"] -->|"5V_SYS + I2S over 8-pin neck cable"| HEAD
+    HEAD["HEAD PCB"] --> LDO["ME6211C33M5G\n3.3 V LDO"]
+    LDO --> MCU["ESP32-S3-WROOM-1-N16R8"]
+    HEAD --> SERVO["2 × Servo headers\n5V_SYS + PWM"]
+    MCU --> TFT["SPI TFT"]
+    MCU --> SD["microSD"]
+    MCU --> ACC["ADXL345\nI2C"]
+    MCU --> MIC["INMP441\nI2S"]
+    MCU --> AMP["MAX98357A\nI2S audio amplifier"]
+    MCU --> TOUCH["TTP223\nTouch input"]
+    MCU --> RGB["WS2812B\nRGB status LED"]
+    MCU --> USB["Native USB-C\nBOOT / RESET"]
+```
+
+> A dedicated schematic image and a 3D-render image are not committed yet. The editable schematic exists inside the EasyEDA Pro project, and a 3D CAD export exists separately; both should be added only from verified exports of the final design revision.
 
 ## What this board does
 
@@ -121,6 +158,7 @@ A source-derived BOM is included at [`hardware/BOM_HEAD_PCB.csv`](hardware/BOM_H
 - [`docs/pin-mapping.md`](docs/pin-mapping.md) — GPIO/interface allocation
 - [`docs/design-decisions.md`](docs/design-decisions.md) — design rationale
 - [`docs/design-specification.md`](docs/design-specification.md) — formatted electrical specification
+- [`docs/project-status.md`](docs/project-status.md) — explicit completion / validation status
 - [`docs/bring-up-checklist.md`](docs/bring-up-checklist.md) — post-fabrication validation plan
 
 ## Native design source and manufacturing outputs
@@ -142,12 +180,14 @@ A 3D CAD export exists for this PCB, but a **public live 3D viewer is not curren
 ├── hardware/
 │   ├── BOM_HEAD_PCB.csv
 │   ├── easyeda/
+│   ├── manufacturing/
 │   └── 3d/
 └── docs/
     ├── architecture.md
     ├── pin-mapping.md
     ├── design-decisions.md
     ├── design-specification.md
+    ├── project-status.md
     ├── bring-up-checklist.md
     └── images/
 ```
