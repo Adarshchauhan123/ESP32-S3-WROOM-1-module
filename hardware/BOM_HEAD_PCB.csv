@@ -1,0 +1,30 @@
+Designators,Qty,Value / Part,Manufacturer Part Number,Footprint / Package,Supplier,Supplier Part Number,Function
+U1,1,ESP32-S3-WROOM-1-N16R8,ESPS3-32-N16R8,ESP32-S3-WROOM-1 module,LCSC,C49164658,Main MCU / Wi-Fi / BLE
+LDO1,1,ME6211C33M5G-N,ME6211C33M5G-N,SOT-23-5,LCSC,C82942,5V_SYS to 3.3 V regulator
+U7,1,MAX98357A,MAX98357AETE+T,TQFN-16 3x3 mm,LCSC,C910544,I2S class-D audio amplifier
+U8,1,ADXL345,ADXL345BCCZ-RL,LGA-14 5x3 mm,LCSC,C579457,3-axis accelerometer
+MIC,1,INMP441,INMP441ACEZ,LGA / MID 4.7x3.8 mm,LCSC,C9900011556,I2S digital microphone
+U10,1,TTP223,TTP223E-BA6,SOT-23-6,LCSC,C129457,Capacitive-touch controller
+LED1,1,WS2812B,WS2812B-B/W,5050 4-pin SMD,LCSC,C114586,Addressable RGB status LED
+CARD1,1,microSD socket,TF-01,TF-SMD,LCSC,C2889257,SPI microSD storage
+USB1,1,USB-C receptacle,TYPE-C-2MD-16P,USB-C SMD,LCSC,C42418793,Native USB programming / data
+D1,1,USB ESD protector,D1213A-04TS-7,TSOT-23-6,LCSC,C460588,USB signal ESD protection
+U11,1,ESD9B5.0ST5G,ESD9B5.0ST5G-ES,SOD-923,LCSC,C5180229,Touch / exposed-I/O ESD protection
+U5 U6,2,ESD5Z5V0,ESD5Z5V0,SOD-523,LCSC,C20611933,Servo PWM ESD protection
+BOOT RESET,2,Tactile switch,BX-TS-26-3635TT,SMD tactile switch,LCSC,C18078107,BOOT and RESET controls
+SERVO1 SERVO2,2,3-pin servo header,HX 2.54mm-3P ZZ,Through-hole 3-pin header,LCSC,C7543432,5V / GND / PWM servo connection
+U3,1,8-pin body-head connector,B8B-PH-K-S(LF)(SN),JST-PH through-hole,LCSC,C157974,Body-to-head power / signal interface
+SPK,1,2-pin speaker connector,B2B-PH-K-S(LF)(SN),JST-PH through-hole,LCSC,C131337,Speaker output connector
+TCH_PAD,1,3-pin touch-pad connector,B3B-PH-K-S(LF)(SN),JST-PH through-hole,LCSC,C131339,External touch-pad connection
+FPC1,1,8-pin display/header connector,HX PM2.54-1x8P ZC-Y,2.54 mm through-hole header,LCSC,C22438158,TFT / peripheral header
+1000UF,1,1000 uF electrolytic,UMA1V100MDD,Radial 8 mm / 3.5 mm pitch,RS Online,475-9396,Audio bulk capacitance
+C4 C5,2,470 uF electrolytic,Generic,Radial 6.3 mm / 2.5 mm pitch,Generic,TBD,Servo bulk capacitance
+C1 C2,2,10 uF,Generic,C0805,Generic,TBD,LDO input / output bulk capacitance
+C3,1,100 nF,Generic,C0805,Generic,TBD,Local decoupling
+C6 C7,2,100 nF,Generic,C0402,Generic,TBD,Local decoupling
+C8 C9 C10 C11 C12 C13,6,100 nF,Generic,C0603,Generic,TBD,IC / rail decoupling
+R1 R3,2,4.7 kOhm,Generic,R0603,Generic,TBD,I2C pull-ups
+R2 R5 R7 R9 R10 R11 R12 R13,8,10 kOhm,Generic,R0603,Generic,TBD,Bias / pull-up resistors
+R4,1,330 Ohm,Generic,R0603,Generic,TBD,RGB LED data series resistor
+R6,1,1 MOhm,Generic,R0805,Generic,TBD,Audio amplifier configuration
+R8,1,1 kOhm,Generic,R0603,Generic,TBD,Configuration / bias resistor
