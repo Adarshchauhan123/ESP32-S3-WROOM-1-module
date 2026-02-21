@@ -1,6 +1,6 @@
 # HEAD PCB — ESP32-S3-WROOM-1 Embedded Controller
 
-> **Interview-ready hardware portfolio:** a custom 2-layer head/controller PCB built around the ESP32-S3-WROOM-1, designed in EasyEDA Pro for a larger robot system.
+A custom 2-layer head/controller PCB built around the **ESP32-S3-WROOM-1**, designed in EasyEDA Pro for a larger robot system.
 
 ## What this board does
 
@@ -42,7 +42,7 @@ HEAD PCB
 
 ## Power architecture
 
-The board deliberately separates the high-current and logic domains:
+The board separates high-current and logic domains:
 
 - **5V_SYS:** servo motors and MAX98357A audio power.
 - **3.3 V:** ESP32-S3 and logic/peripherals.
@@ -115,7 +115,6 @@ The design includes reliability changes intended to avoid unstable startup and r
 │   ├── architecture.md
 │   ├── pin-mapping.md
 │   ├── design-decisions.md
-│   ├── interview-guide.md
 │   └── design-specification.txt
 ├── website/                 # Interactive browser-based 3D model viewer
 └── .github/workflows/       # GitHub Pages deployment
@@ -146,17 +145,6 @@ Then open `http://localhost:8000`.
 **Available in this repository:** schematic/PCB project source, layout data, 3D CAD export, design specification and interface documentation.
 
 **Not claimed here:** physical fabrication/assembly, measured bench results, or production firmware. Those items are intentionally not presented as completed because the provided project material does not document them.
-
-## What I would explain in an interview
-
-1. **Power-domain separation:** keep servos/audio on 5V_SYS so load transients do not directly stress the ESP32 3.3 V rail.
-2. **Startup reliability:** EN capacitor + BOOT pull-up + regulator decoupling give defined startup behavior.
-3. **Shared buses:** TFT and microSD share the SPI bus using separate chip-select signals; I2C is used for the ADXL345.
-4. **Audio path:** ESP32 I2S drives MAX98357A for the speaker, while INMP441 provides digital microphone input.
-5. **Protection/layout:** USB and exposed I/O use ESD protection; continuous ground and controlled return paths reduce noise problems.
-6. **Servo transients:** wide 5 V routes and local bulk capacitance are used because servo stall/step current can cause supply droop and resets.
-
-For a deeper walkthrough, see [`docs/interview-guide.md`](docs/interview-guide.md).
 
 ---
 
