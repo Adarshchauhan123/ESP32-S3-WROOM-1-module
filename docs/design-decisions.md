@@ -35,8 +35,8 @@ A continuous ground reference is preferred on the bottom layer. High-speed USB/S
 
 ## 7. ESP32 antenna keep-out
 
-The ESP32-S3 module placement must preserve the antenna keep-out region: no copper, traces, or components in the restricted RF area.
+The ESP32-S3 module placement preserves the antenna keep-out region so copper, traces and components do not interfere with the RF antenna area.
 
-## 8. Interview note
+## 8. Current validation state
 
-This repository documents the **hardware design and design intent**. It does not claim physical fabrication, bench validation, or final production firmware unless such evidence is later added.
+The repository documents the schematic, PCB layout and design intent. Physical fabrication, assembled-board bring-up, measured rail/noise data and final production firmware are not claimed unless corresponding evidence is added.
