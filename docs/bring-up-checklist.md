@@ -45,9 +45,7 @@ Use this after fabrication/assembly. It is intentionally written as a validation
 - [ ] Check audio peaks do not collapse the supply.
 - [ ] Inspect USB, SPI and I2S signals if a scope/logic analyzer is available.
 
-## Evidence to add later
-
-For an interview-ready validation section, add:
+## Validation evidence to add after testing
 
 - board photographs
 - 5V_SYS and 3.3 V measured values
