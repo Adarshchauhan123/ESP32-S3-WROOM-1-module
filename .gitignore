@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*~
+
+# EasyEDA / local export clutter
+*.autosave
+*.backup
+*.log
+
+# Archives generated for transfer
+*.zip
+*.rar
+*.7z
