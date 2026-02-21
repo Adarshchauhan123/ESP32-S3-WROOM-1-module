@@ -6,7 +6,7 @@ A custom **2-layer embedded controller PCB** built around the **ESP32-S3-WROOM-1
 
 ## PCB layout
 
-![HEAD PCB layout](docs/images/pcb-layout-overview.jpg)
+![HEAD PCB layout](docs/images/pcb-layout-overview.png)
 
 ## What this board does
 
@@ -139,7 +139,7 @@ It contains reference designators, quantity, part/value, manufacturer part numbe
     ├── design-decisions.md
     ├── bring-up-checklist.md
     └── images/
-        └── pcb-layout-overview.jpg
+        └── pcb-layout-overview.png
 ```
 
 ## Hardware validation plan
