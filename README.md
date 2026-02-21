@@ -24,7 +24,7 @@ See [`docs/project-status.md`](docs/project-status.md) for the same status in a 
 
 ### PCB layout
 
-![HEAD PCB layout](docs/images/Screenshot%202026-08-21%20033306.png)
+![HEAD PCB layout](docs/images/head-pcb-layout.png)
 
 ## Schematic
 
