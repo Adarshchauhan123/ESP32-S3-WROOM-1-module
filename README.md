@@ -6,8 +6,9 @@ A custom **2-layer embedded controller PCB** built around the **ESP32-S3-WROOM-1
 
 | Area | Status |
 |---|---|
-| Schematic | Complete in EasyEDA Pro source |
+| Schematic | Complete |
 | PCB layout | Complete |
+| EasyEDA Pro source | Included |
 | BOM | Included |
 | DRC | Not claimed until an exported DRC report is committed |
 | Gerber / NC drill | Not yet committed |
@@ -173,27 +174,34 @@ A source-derived BOM is included at [`hardware/BOM_HEAD_PCB.csv`](hardware/BOM_H
 - [`docs/project-status.md`](docs/project-status.md) — explicit completion / validation status
 - [`docs/bring-up-checklist.md`](docs/bring-up-checklist.md) — post-fabrication validation plan
 
-## Native design source and manufacturing outputs
+## Native design source
 
-The PCB was designed in **EasyEDA Pro**. The native `.epro2` project is the editable source format.
+The PCB was designed in **EasyEDA Pro**. The editable project source is included at:
 
-For tool-independent manufacturing review, standard outputs should include **Gerber + NC drill files**. These are **not currently included**, because no verified Gerber export from the final PCB revision is available in this repository yet. They should be exported from the final EasyEDA board and checked in a Gerber viewer before being committed.
+[`hardware/easyeda/HEAD_PCB.epro2`](hardware/easyeda/HEAD_PCB.epro2)
+
+Import instructions are available in [`hardware/easyeda/README.md`](hardware/easyeda/README.md).
+
+## Manufacturing outputs
+
+Gerber and NC drill files are **not included yet** because a verified export from the final PCB revision has not been committed. They should be exported from the final EasyEDA board and checked in a Gerber viewer before being added.
 
 ## 3D model status
 
-A 3D CAD export exists for this PCB, but a **public live 3D viewer is not currently advertised here because no verified GitHub Pages deployment exists in this repository yet**. A live link should only be added after the viewer files are committed and the Pages deployment is confirmed working.
+A 3D CAD export exists separately, but no verified model or public live viewer is committed in this repository yet.
 
 ## Repository structure
 
 ```text
 .
+├── .gitignore
 ├── README.md
 ├── LICENSE
 ├── hardware/
 │   ├── BOM_HEAD_PCB.csv
-│   ├── easyeda/
-│   ├── manufacturing/
-│   └── 3d/
+│   └── easyeda/
+│       ├── HEAD_PCB.epro2
+│       └── README.md
 └── docs/
     ├── architecture.md
     ├── pin-mapping.md
